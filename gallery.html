@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <title>Ayush Gupta</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="styles.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            .mySlides {display:none;}
+        </style>
+    </head>
+    <body>
+       <nav>
+           <div class="logo">
+               <h3>Ayush Gupta</h3>
+           </div>
+           <ul class="nav-links">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="index.html#about">About</a></li>
+               <li><a href="gallery.html">Gallery</a></li>
+               <li><a href="index.html#contact">Contact</a></li>
+           </ul>
+           <div class="burger">
+               <div class="line1"></div>
+               <div class="line2"></div>
+               <div class="line3"></div>
+           </div>
+       </nav>
+
+       <script src="app.js"></script>
+
+      <div id="home">
+        <div class="landing-text">
+            <h1>GALLERY</h1>
+        </div>
+      </div>
+
+      <div class="gallery" style="margin-top: -20px;">
+        <h2 class="title">Colored Pencil:</h2>
+        <img id="imageC" class="pictures" src="jcole.jpg">
+        <button id="rightC" class="link" style="text-align: right">></button>
+        <button id="leftC" class="link" style="text-align: left"><</button>
+        <script>
+          let c = 0;
+          document.querySelector('#leftC').onclick = function(){
+            var imageC = document.getElementById("imageC");
+            c = c - 1;
+            if (c == 0)
+            {
+              next_image = "jcole.jpg";
+            }
+            else if (c == 1)
+            {
+              next_image = "kobe.jpg";
+            }
+            else if (c == 2)
+            {
+              next_image = "travis.jpg";
+            }
+            else if (c == -1)
+            {
+              c = 2;
+              next_image = "travis.jpg";
+            }
+            else
+            {
+              c = c;
+            }
+            imageC.src = next_image;
+          }
+          document.querySelector('#rightC').onclick = function(){
+            var imageC = document.getElementById("imageC");
+            c = c + 1;
+            if (c == 0)
+            {
+              next_image = "jcole.jpg";
+            }
+            else if (c == 1)
+            {
+              next_image = "kobe.jpg";
+            }
+            else if (c == 2)
+            {
+              next_image = "travis.jpg";
+            }
+            else if (c == 3)
+            {
+              c = 0;
+              next_image = "jcole.jpg";
+            }
+            else
+            {
+              c = c;
+            }
+            imageC.src = next_image;
+          }
+        </script>
+      </div>
+
+        <div class="gallery">
+          <h2 class="title">Graphite/Charcoal:</h2>
+          <img id="imageG" class="pictures" src="dragon.jpg">
+          <button id="rightG" class="link" style="text-align: right">></button>
+          <button id="leftG" class="link" style="text-align: left"><</button>
+          <script>
+            let g = 0;
+            document.querySelector('#leftG').onclick = function(){
+              var imageG = document.getElementById("imageG");
+              g = g - 1;
+              if (g == 0)
+              {
+                next_image = "dragon.jpg";
+              }
+              else if (g == 1)
+              {
+                next_image = "drake1.jpg";
+              }
+              else if (g == 2)
+              {
+                next_image = "arianna.jpg";
+              }
+              else if (g == 3)
+              {
+                next_image = "kd.jpg";
+              }
+              else if (g == 4)
+              {
+                next_image = "eyes.jpg";
+              }
+              else if (g == 5)
+              {
+                next_image = "drake2.jpg";
+              }
+              else if (g == 6)
+              {
+                next_image = "voldy.jpg";
+              }
+              else if (g == 7)
+              {
+                next_image = "curry.jpg";
+              }
+              else if (g == 8)
+              {
+                next_image = "lips.jpg";
+              }
+              else if (g == 9)
+              {
+                next_image = "emma.jpg";
+              }
+              else if (g == 10)
+              {
+                next_image = "drake3.jpg";
+              }
+              else if (g == -1)
+              {
+                g = 10;
+                next_image = "drake3.jpg";
+              }
+              else
+              {
+                g = g;
+              }
+              imageG.src = next_image;
+            }
+            document.querySelector('#rightG').onclick = function(){
+              var imageG = document.getElementById("imageG");
+              g = g + 1;
+              if (g == 0)
+              {
+                next_image = "dragon.jpg";
+              }
+              else if (g == 1)
+              {
+                next_image = "drake1.jpg";
+              }
+              else if (g == 2)
+              {
+                next_image = "arianna.jpg";
+              }
+              else if (g == 3)
+              {
+                next_image = "kd.jpg";
+              }
+              else if (g == 4)
+              {
+                next_image = "eyes.jpg";
+              }
+              else if (g == 5)
+              {
+                next_image = "drake2.jpg";
+              }
+              else if (g == 6)
+              {
+                next_image = "voldy.jpg";
+              }
+              else if (g == 7)
+              {
+                next_image = "curry.jpg";
+              }
+              else if (g == 8)
+              {
+                next_image = "lips.jpg";
+              }
+              else if (g == 9)
+              {
+                next_image = "emma.jpg";
+              }
+              else if (g == 10)
+              {
+                next_image = "drake3.jpg";
+              }
+              else if (g == 11)
+              {
+                g = 0;
+                next_image = "dragon.jpg";
+              }
+              else
+              {
+                g = g;
+              }
+              imageG.src = next_image;
+            }
+          </script>
+        </div>
+
+        <div class="gallery">
+            <h2 class="title">Marker:</h2>
+            <img id="imageM" class="pictures" src="nmd.jpg">
+            <button id="rightM" class="link" style="text-align: right">></button>
+            <button id="leftM" class="link" style="text-align: left"><</button>
+            <script>
+              let m = 0;
+              document.querySelector('#leftM').onclick = function(){
+                var imageM = document.getElementById("imageM");
+                m = m - 1;
+                if (m == 0)
+                {
+                  next_image = "nmd.jpg";
+                }
+                else if (m == 1)
+                {
+                  next_image = "yeezy.jpg";
+                }
+                else if (m == 2)
+                {
+                  next_image = "apple.jpg";
+                }
+                else if (m == -1)
+                {
+                  m = 2;
+                  next_image = "apple.jpg";
+                }
+                else
+                {
+                  m = m;
+                }
+                imageM.src = next_image;
+              }
+              document.querySelector('#rightM').onclick = function(){
+                var imageM = document.getElementById("imageM");
+                m = m + 1;
+                if (m == 0)
+                {
+                  next_image = "nmd.jpg";
+                }
+                else if (m == 1)
+                {
+                  next_image = "yeezy.jpg";
+                }
+                else if (m == 2)
+                {
+                  next_image = "apple.jpg";
+                }
+                else if (m == 3)
+                {
+                  m = 0;
+                  next_image = "nmd.jpg";
+                }
+                else
+                {
+                  m = m;
+                }
+                imageM.src = next_image;
+              }
+            </script>
+          </div>
+
+              <div class="gallery">
+                <h2 class="title">Paintings:</h2>
+                <img id="imageP" class="pictures" src="lake.jpg">
+                <button id="rightP" class="link" style="text-align: right">></button>
+                <button id="leftP" class="link" style="text-align: left"><</button>
+                <script>
+                  let p = 0;
+                  document.querySelector('#leftP').onclick = function(){
+                    var imageP = document.getElementById("imageP");
+                    p = p - 1;
+                    if (p == 0)
+                    {
+                      next_imageP = "lake.jpg";
+                    }
+                    else if (p == 1)
+                    {
+                      next_imageP = "trees.jpg";
+                    }
+                    else if (p == 2)
+                    {
+                      next_imageP = "jay.jpg";
+                    }
+                    else if (p == 3)
+                    {
+                      next_imageP = "house.jpg";
+                    }
+                    else if (p == 4)
+                    {
+                      next_imageP = "couple.jpg";
+                    }
+                    else if (p == 5)
+                    {
+                      next_imageP = "birds.jpg";
+                    }
+                    else if (p == 6)
+                    {
+                      next_imageP = "vase.jpg";
+                    }
+                    else if (p == 7)
+                    {
+                      next_imageP = "car.jpg";
+                    }
+                    else if (p == 8)
+                    {
+                      next_imageP = "phoenix.jpg";
+                    }
+                    else if (p == 9)
+                    {
+                      next_imageP = "skull.jpg";
+                    }
+                    else if (p == 10)
+                    {
+                      next_imageP = "cheetah.jpg";
+                    }
+                    else if (p == 11)
+                    {
+                      next_imageP = "grapes.jpg";
+                    }
+                    else if (p == -1)
+                    {
+                      p = 11;
+                      next_imageP = "grapes.jpg";
+                    }
+                    else
+                    {
+                      p = p;
+                    }
+                    imageP.src = next_imageP;
+                  }
+                  document.querySelector('#rightP').onclick = function(){
+                    var imageP = document.getElementById("imageP");
+                    p = p + 1;
+                    if (p == 0)
+                    {
+                      next_imageP = "lake.jpg";
+                    }
+                    else if (p == 1)
+                    {
+                      next_imageP = "trees.jpg";
+                    }
+                    else if (p == 2)
+                    {
+                      next_imageP = "jay.jpg";
+                    }
+                    else if (p == 3)
+                    {
+                      next_imageP = "house.jpg";
+                    }
+                    else if (p == 4)
+                    {
+                      next_imageP = "couple.jpg";
+                    }
+                    else if (p == 5)
+                    {
+                      next_imageP = "birds.jpg";
+                    }
+                    else if (p == 6)
+                    {
+                      next_imageP = "vase.jpg";
+                    }
+                    else if (p == 7)
+                    {
+                      next_imageP = "car.jpg";
+                    }
+                    else if (p == 8)
+                    {
+                      next_imageP = "phoenix.jpg";
+                    }
+                    else if (p == 9)
+                    {
+                      next_imageP = "skull.jpg";
+                    }
+                    else if (p == 10)
+                    {
+                      next_imageP = "cheetah.jpg";
+                    }
+                    else if (p == 11)
+                    {
+                      next_imageP = "grapes.jpg";
+                    }
+                    else if (p == 12)
+                    {
+                      p = 0;
+                      next_imageP = "lake.jpg";
+                    }
+                    else
+                    {
+                      p = p;
+                    }
+                    imageP.src = next_imageP;
+                  }
+                </script>
+              </div>
+
+        <footer class="container-fluid text-center"  id="contact">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Contact</h3>
+                    <br>
+                    <h4>ayugup2004@gmail.com</h4>
+                    <h4>510-676-9076</h4>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Social Media</h3>
+                    <br>
+                    <a href="https://www.facebook.com/profile.php?id=100028839541320"><img src="fb.jpg" width="70px" height="70px"></a>
+                    <a href="https://www.instagram.com/ayu5h_gupt4/"><img src="ig.jpg" width="40px" height="40px"></a>
+                </div>
+                <div class="col-sm-4">
+                    <img src="logo.jpg" class="icon">
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
