@@ -105,8 +105,8 @@ nav
     position: relative;
     width: 100%;
     background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(4px);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
 footer
 {
