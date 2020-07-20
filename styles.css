@@ -99,14 +99,14 @@ nav
 }
 #fixed
 {
-    background: url(working.jpg) no-repeat center center fixed;
+    background: url(background.jpg) no-repeat center center fixed;
     display: table;
-    height: 50%;
+    height: 30%;
     position: relative;
     width: 100%;
     background-size: cover;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
 }
 footer
 {
