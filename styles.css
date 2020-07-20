@@ -244,15 +244,15 @@ button
     {
         position: absolute;
         right: 0px;
-        height: 60vh;
+        height: 7vh;
         top: 10vh;
-        background-color: #000506;
+        background-color: #040a2f;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        width: 40%;
+        width: 100%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.4s ease-in;
         z-index: 2;
     }
     .nav-links li
@@ -341,9 +341,3 @@ p
     font-size: 50px;
     font-family: bignoodletitling;
 }
-
-
-
-
-
-
