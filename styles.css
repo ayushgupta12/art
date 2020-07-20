@@ -251,7 +251,7 @@ button
         flex-direction: row;
         align-items: center;
         width: 100%;
-        transform: translateX(100%);
+        transform: translateY(-20vh);
         transition: transform 0.4s ease-in;
         z-index: 2;
     }
@@ -296,13 +296,19 @@ p
     }
 }
 .toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
+    transform: rotate(-45deg) translate(-10px,7px);
+    transition-duration: 0.5s;
+    background-color: red;
 }
 .toggle .line2{
     opacity: 0;
+    transition-duration: 0.5s;
+    background-color: red;
 }
 .toggle .line3{
-    transform: rotate(45deg) translate(-5px,6px);
+    transform: rotate(45deg) translate(-5px,0px);
+    transition-duration: 0.5s;
+    background-color: red;
 }
 .link
 {
