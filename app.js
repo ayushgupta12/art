@@ -18,7 +18,7 @@ const navSlide = () => {
 
         });
         //Burger animation
-        burger.classlist.toggle('.toggle');
+        burger.classList.toggle('.toggle');
     });
 
 }
