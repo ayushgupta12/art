@@ -101,12 +101,12 @@ nav
 {
     background: url(background.jpg) no-repeat center center fixed;
     display: table;
-    height: 30%;
+    height: 10%;
     position: relative;
     width: 100%;
     background-size: cover;
-    filter: blur(6px);
-    -webkit-filter: blur(6px);
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
 }
 footer
 {
@@ -264,6 +264,12 @@ button
         display: block;
         cursor: pointer;
     }
+    #fixed
+    {
+        height: 7%;
+    }
+
+
 }
 .landing-text a
 {
@@ -275,7 +281,7 @@ button
 }
 p
 {
-    font-size: bignoodletitling;
+    font-family: bignoodletitling;
 }
 .nav-active
 {
