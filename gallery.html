@@ -25,6 +25,7 @@
                <li><a href="index.html">Home</a></li>
                <li><a href="index.html#about">About</a></li>
                <li><a href="gallery.html">Gallery</a></li>
+               <li><a href="progress.html">Drafts</a></li>
                <li><a href="index.html#contact">Contact</a></li>
            </ul>
            <div class="burger">
@@ -64,10 +65,14 @@
             {
               next_image = "travis.jpg";
             }
+            else if (c == 3)
+            {
+              next_image = "hope.jpg";
+            }
             else if (c == -1)
             {
-              c = 2;
-              next_image = "travis.jpg";
+              c = 3;
+              next_image = "hope.jpg";
             }
             else
             {
@@ -91,6 +96,10 @@
               next_image = "travis.jpg";
             }
             else if (c == 3)
+            {
+              next_image = "hope.jpg";
+            }
+            else if (c == 4)
             {
               c = 0;
               next_image = "jcole.jpg";
@@ -252,10 +261,14 @@
                 {
                   next_image = "apple.jpg";
                 }
+                else if (m == 3)
+                {
+                  next_image = "mario.jpg";
+                }
                 else if (m == -1)
                 {
-                  m = 2;
-                  next_image = "apple.jpg";
+                  m = 3;
+                  next_image = "mario.jpg";
                 }
                 else
                 {
@@ -279,6 +292,10 @@
                   next_image = "apple.jpg";
                 }
                 else if (m == 3)
+                {
+                  next_image = "mario.jpg";
+                }
+                else if (m == 4)
                 {
                   m = 0;
                   next_image = "nmd.jpg";
