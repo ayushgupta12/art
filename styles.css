@@ -32,7 +32,7 @@ nav
     display: flex;
     background-color: #000506;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
 }
 .nav-links li
 {
@@ -230,7 +230,7 @@ button
 {
     .nav-links
     {
-        width: 60%;
+        width: 70%;
     }
 }
 
@@ -242,6 +242,7 @@ button
     }
     .nav-links
     {
+        vertical-align: middle;
         position: absolute;
         right: 0px;
         height: 7vh;
@@ -249,14 +250,24 @@ button
         background-color: #040a2f;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: stretch;
         width: 100%;
         transform: translateY(-20vh);
         transition: transform 0.4s ease-in;
         z-index: 2;
     }
+    .nav-links a
+    {
+        color: #FFF;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-family: bignoodletitling;
+    }
     .nav-links li
     {
+        padding-right: 10px;
+        padding-top: 1vh;
         opacity: 0;
     }
     .burger
