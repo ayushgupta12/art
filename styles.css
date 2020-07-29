@@ -260,8 +260,8 @@ button
     {
         color: #FFF;
         text-decoration: none;
-        letter-spacing: 2px;
-        font-size: 18px;
+        letter-spacing: 1px;
+        font-size: 17px;
         font-family: bignoodletitling;
     }
     .nav-links li
