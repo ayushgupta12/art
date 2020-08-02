@@ -130,7 +130,7 @@ footer h4
 {
     .landing-text h1
     {
-        font-size: 300%;
+        font-size: 280%;
         text-shadow: -1px -1px 0 white,
          1px -1px 0 white,
          -1px 1px 0 white,
@@ -148,7 +148,7 @@ footer h4
     }
     .landing-text h3
     {
-        font-size: 200%;
+        font-size: 180%;
         text-shadow: -1px -1px 0 white,
          1px -1px 0 white,
          -1px 1px 0 white,
@@ -259,11 +259,15 @@ button
     .nav-links a
     {
         color: #FFF;
+        letter-spacing: 0.5px;
         text-decoration: none;
-        letter-spacing: 1px;
         font-size: 17px;
         font-weight: bold;
         font-family: bignoodletitling;
+        text-shadow: -0.5px -0.5px 0 black,
+         0.5px -0.5px 0 black,
+         -0.5px 0.5px 0 black,
+         0.5px 0.5px 0 black;
     }
     .nav-links li
     {
@@ -280,7 +284,10 @@ button
     {
         height: 7%;
     }
-
+    #home
+    {
+        height: 55%;
+    }
 
 }
 .landing-text a
@@ -365,11 +372,3 @@ p
     font-size: 50px;
     font-family: bignoodletitling;
 }
-
-
-
-
-
-
-
-
