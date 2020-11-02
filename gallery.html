@@ -239,78 +239,8 @@
             }
           </script>
         </div>
-
-        <div class="gallery">
-            <h2 class="title">Marker:</h2>
-            <img id="imageM" class="pictures" src="nmd.jpg">
-            <button id="rightM" class="link" style="text-align: right">></button>
-            <button id="leftM" class="link" style="text-align: left"><</button>
-            <script>
-              let m = 0;
-              document.querySelector('#leftM').onclick = function(){
-                var imageM = document.getElementById("imageM");
-                m = m - 1;
-                if (m == 0)
-                {
-                  next_image = "nmd.jpg";
-                }
-                else if (m == 1)
-                {
-                  next_image = "yeezy.jpg";
-                }
-                else if (m == 2)
-                {
-                  next_image = "apple.jpg";
-                }
-                else if (m == 3)
-                {
-                  next_image = "mario.jpg";
-                }
-                else if (m == -1)
-                {
-                  m = 3;
-                  next_image = "mario.jpg";
-                }
-                else
-                {
-                  m = m;
-                }
-                imageM.src = next_image;
-              }
-              document.querySelector('#rightM').onclick = function(){
-                var imageM = document.getElementById("imageM");
-                m = m + 1;
-                if (m == 0)
-                {
-                  next_image = "nmd.jpg";
-                }
-                else if (m == 1)
-                {
-                  next_image = "yeezy.jpg";
-                }
-                else if (m == 2)
-                {
-                  next_image = "apple.jpg";
-                }
-                else if (m == 3)
-                {
-                  next_image = "mario.jpg";
-                }
-                else if (m == 4)
-                {
-                  m = 0;
-                  next_image = "nmd.jpg";
-                }
-                else
-                {
-                  m = m;
-                }
-                imageM.src = next_image;
-              }
-            </script>
-          </div>
-
-              <div class="gallery">
+            
+           <div class="gallery">
                 <h2 class="title">Paintings:</h2>
                 <img id="imageP" class="pictures" src="lake.jpg">
                 <button id="rightP" class="link" style="text-align: right">></button>
@@ -443,6 +373,78 @@
                   }
                 </script>
               </div>
+
+        <div class="gallery">
+            <h2 class="title">Marker:</h2>
+            <img id="imageM" class="pictures" src="nmd.jpg">
+            <button id="rightM" class="link" style="text-align: right">></button>
+            <button id="leftM" class="link" style="text-align: left"><</button>
+            <script>
+              let m = 0;
+              document.querySelector('#leftM').onclick = function(){
+                var imageM = document.getElementById("imageM");
+                m = m - 1;
+                if (m == 0)
+                {
+                  next_image = "nmd.jpg";
+                }
+                else if (m == 1)
+                {
+                  next_image = "yeezy.jpg";
+                }
+                else if (m == 2)
+                {
+                  next_image = "apple.jpg";
+                }
+                else if (m == 3)
+                {
+                  next_image = "mario.jpg";
+                }
+                else if (m == -1)
+                {
+                  m = 3;
+                  next_image = "mario.jpg";
+                }
+                else
+                {
+                  m = m;
+                }
+                imageM.src = next_image;
+              }
+              document.querySelector('#rightM').onclick = function(){
+                var imageM = document.getElementById("imageM");
+                m = m + 1;
+                if (m == 0)
+                {
+                  next_image = "nmd.jpg";
+                }
+                else if (m == 1)
+                {
+                  next_image = "yeezy.jpg";
+                }
+                else if (m == 2)
+                {
+                  next_image = "apple.jpg";
+                }
+                else if (m == 3)
+                {
+                  next_image = "mario.jpg";
+                }
+                else if (m == 4)
+                {
+                  m = 0;
+                  next_image = "nmd.jpg";
+                }
+                else
+                {
+                  m = m;
+                }
+                imageM.src = next_image;
+              }
+            </script>
+          </div>
+
+          
 
         <footer class="container-fluid text-center"  id="contact">
             <div class="row">
