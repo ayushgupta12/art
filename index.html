@@ -1,142 +1,178 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
     <head>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-        <title>Ayush Gupta</title>
-        <link rel="shortcut icon" href="logo.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="styles.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style>
-            .mySlides {display:none;}
-        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Ayush Gupta Art</title>
     </head>
     <body>
-       <nav>
-           <div class="logo">
-               <a href="index.html"><h3 class="logo">Ayush Gupta</h3></a>
-           </div>
-           <ul class="nav-links">
-               <li><a href="index.html">Home</a></li>
-               <li><a href="index.html#about">About</a></li>
-               <li><a href="gallery.html">Gallery</a></li>
-               <li><a href="progress.html">Unfinished</a></li>
-               <li><a href="index.html#contact">Contact</a></li>
-           </ul>
-           <div class="burger">
-               <div class="line1"></div>
-               <div class="line2"></div>
-               <div class="line3"></div>
-           </div>
-       </nav>
-
-       <script src="app.js"></script>
-
-        <div id="home">
-            <div class="landing-text">
-                <h1>AYUSH GUPTA</h1>
-                <h3>Online Portfolio</h3>
-                <br>
-                <a href="gallery.html">Gallery</a>
-            </div>
-        </div>
-
-
-        <div class="padding">
+        <header>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="BLM.jpg" class="responsive">
+                <nav>
+                    <div class="nav-brand">
+                        <a href="index.html">
+                            <img src="logo.jpg" alt="logo">
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <div>
-                            <div class="w3-content w3-section" id="slideshowD">
-                              <img class="mySlides" src="dragon.jpg" style="width:100%">
-                              <img class="mySlides" src="nmd.jpg" style="width:100%">
-                              <img class="mySlides" src="house.jpg" style="width:100%">
-                              <img class="mySlides" src="lake.jpg" style="width:100%">
-                            </div>
+                    <div class="menu-icons open">
+                        <i class="icon ion-md-menu"></i>
+                    </div>
+                    <ul class="nav-list">
+                        <div class="menu-icons close">
+                            <i class="icon ion-md-close"></i>
+                        </div>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link current">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#about" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="progress.html" class="nav-link">Unfinished</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
 
-                            <script>
-                            var myIndex = 0;
-                            carousel();
+                </nav>
+            </div>
+        </header>
 
-                            function carousel() {
-                              var i;
-                              var x = document.getElementsByClassName("mySlides");
-                              for (i = 0; i < x.length; i++) {
-                                x[i].style.display = "none";
-                              }
-                              myIndex++;
-                              if (myIndex > x.length) {myIndex = 1}
-                              x[myIndex-1].style.display = "block";
-                              setTimeout(carousel, 4000); // Change image every 5 seconds
-                            }
-                            </script>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="main-message">
+                        <h3>Ayush Gupta's</h3>
+                        <h1>Online Portfolio</h1>
+                        <p>A complete online gallery of Ayush's numerous art pieces throughout the many years.</p>
+                        <div class="cta">
+                            <a href="gallery.html" class="btn">View Gallery</a>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <img src="jcole.jpg" class="responsive">
+                </div>
+            </section>
+
+            <section class="featured text-center">
+                <h1>Featured Works</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="zoom-hover">
+                                <div class="art-img">
+                                    <img src="BLM.jpg">
+                                </div>
+                                <div class="art-details">
+                                    <h4>#BLM</h4>
+                                    <p>Charcoal</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="zoom-hover">
+                                <div class="art-img">
+                                    <div class="carousel">
+                                        <ul>
+                                            <li>
+                                                <div class="carousel-container">
+                                                    <img src="lake.jpg" alt="Lake">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="carousel-container">
+                                                    <img src="dragon.jpg" alt="Dragon">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="carousel-container">
+                                                    <img src="house.jpg" alt="House">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="carousel-container">
+                                                    <img src="phoenix.jpg" alt="Phoenix">
+                                                </div>                                            
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="zoom-hover">
+                                <div class="art-img">
+                                    <img src="jcole.jpg">
+                                </div>
+                                <div class="art-details">
+                                    <h4>J. Cole</h4>
+                                    <p>Colored Pencil</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div id="fixed"></div>
-
-        <div class="padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <img src="ayush.jpg">
-                    </div>
-                    <div class="col-sm-6 text-center" id="about">
-                        <h2>About Me</h2>
-                        <p class="lead">
-                        My name is Ayush Gupta. I am an incoming junior at American High School in the Bay Area. I am a self-taught artist specializing in photo-realistic drawings. I have become dazzled
-                        with the challenge of realistic drawing and the detail that is needed. I love drawing as every picture has its own unique story to tell.
-                        While these drawings may appear effortless, they are often the result of many hours of hard work at my
-                        desk with a great amount of focus. I love sharing the beauty of art with the world and am compelled to follow my passion,
-                        bringing life to each piece of paper all with just a pencil.
-                        </p>
-
-                        <p class="lead">I started off my love for art at as early as 2nd grade. I remember my first art classes, sitting in my teacher's garage, learning the fundamentals of basic art.
-                        I created my first work of art there which sparked a long chain of artwork down the road. I moved on to oil paintings. I created dozens of paintings, some coming out good and some not so much. I spent a couple years taking classes
-                        and became better at the various techniques. I focused objects you would find in nature, watching inanimate objects come to life from seemingly nothing. As I grew older, I moved away from taking classes and taught myself how to draw and color right from my own desk. I used charcoal, graphite, colored pencil, and other mediums.
-                        I failed a lot in the beginning but kept improving from watching others online.
-                        I particularly enjoy making human faces as it is fascinating seeing someone so lifelike staring right back at you from the paper.
-                        </p>
+            </section>
+            
+            <section class="testimonials">
+                <div class="container">
+                    <div class="testimonial">
+                        <div class="testimonial-customer">
+                                <img id="about" src="ayush.jpg" class="zoom-hover" alt="Ayush Gupta">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+            
+            <section class="begin-adventure">
+                <div class="container">
+                    <div class="title-heading">
+                        <h1>About Me Page</h1>
+                    </div>
+                    <div class="adventure-grid">
+                        <div class="adventure-grid-item">
+                            <p>&#9;My name is Ayush Gupta. I am a junior at American High School in the Bay Area. I am a self-taught artist specializing in photo-realistic drawings. 
+                                I have become dazzled with the challenge of realistic drawing and the detail that is needed. I love drawing as every picture has its own unique story to tell. 
+                                While these drawings may appear effortless, they are often the result of many hours of hard work at my desk with a great amount of focus. I love sharing the 
+                                beauty of art with the world and am compelled to follow my passion, bringing life to each piece of paper all with just a pencil.</p>
+                            <p>&#9;I started off my love for art at as early as 2nd grade. I remember my first art classes, sitting in my teacher's garage, learning the fundamentals of basic art. 
+                                I created my first work of art there which sparked a long chain of artwork down the road. I moved on to oil paintings. I created dozens of paintings, some coming 
+                                out good and some not so much. I spent a couple years taking classes and became better at the various techniques. I focused objects you would find in nature, 
+                                watching inanimate objects come to life from seemingly nothing. As I grew older, I moved away from taking classes and taught myself how to draw and color right 
+                                from my own desk. I used charcoal, graphite, colored pencil, and other mediums. I failed a lot in the beginning but kept improving from watching others online. 
+                                I particularly enjoy making human faces as it is fascinating seeing someone so lifelike staring right back at you from the paper.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
 
-        <footer class="container-fluid text-center"  id="contact">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3>Contact</h3>
-                    <br>
-                    <h4>ayugup2004@gmail.com</h4>
-                    <h4>510-676-9076</h4>
-                </div>
-                <div class="col-sm-4">
-                    <h3>Social Media</h3>
-                    <br>
-                    <a href="https://www.facebook.com/profile.php?id=100028839541320"><img src="fb.jpg" width="70px" height="70px"></a>
-                    <a href="https://www.instagram.com/ayu5h_gupt4/"><img src="ig.jpg" width="40px" height="40px"></a>
-                </div>
-                <div class="col-sm-4">
-                    <img src="logo.jpg" class="icon">
-                </div>
+        <footer id="contact">
+            <div class="contact">
+                <h3>Contact:</h3>
+                <h4><a href="mailto:ayugup2004@gmail.com">ayugup2004@gmail.com</a></h4>
+                <h4><a href="tel:5106769076">(510) 676-9076</a></h4>
             </div>
+            <div class="links">
+                <a href="https://www.instagram.com/ayu5h_gupt4/"><img src="ig.jpg" alt="ig logo"></a>
+            </div>
+            <div class="links">
+                <a href="https://www.facebook.com/profile.php?id=100028839541320"><img src="fb.jpg" alt="fb logo"></a>
+            </div>
+            <div class="links">
+                <a href="mailto:ayugup2004@gmail.com"><img src="mail.png" alt="mail logo"></a>
+            </div>
+            <p>&copy; 2020 Ayush Gupta Art. All rights reserved.</p>
         </footer>
-
-
+        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>

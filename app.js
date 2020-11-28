@@ -1,26 +1,58 @@
-const navSlide = () => {
-    const burger = document.querySelector(".burger");
-    const nav = document.querySelector(".nav-links");
-    const navLinks = document.querySelectorAll('.nav-links li');
-    //Toggle Nav
+const selectElement = (s) => document.querySelector(s);
 
-    burger.addEventListener('click', () => {
+selectElement('.open').addEventListener('click', () => {
+    selectElement('.nav-list').classList.add('active');
+});
 
-        nav.classList.toggle('nav-active');
+selectElement('.close').addEventListener('click', () => {
+    selectElement('.nav-list').classList.remove('active');
+});
 
-        //Animate links
-        navLinks.forEach((link, index)=>{
-            if(link.style.animation){
-                link.style.animation = ''
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-            }
-
-        });
-        //Burger animation
-        burger.classList.toggle('toggle');
-    });
-
-}
-
-navSlide()
+document.querySelector('#lebron').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "lebron.jpg";
+  }
+document.querySelector('#kobe2').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "kobe2.jpg";
+  }
+document.querySelector('#steph').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "steph.jpg";
+  }
+document.querySelector('#ariana2').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "ariana2.jpg";
+  }
+document.querySelector('#virgil').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "virgil.jpg";
+  }
+document.querySelector('#GIAW').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "GIAW.jpg";
+  }
+document.querySelector('#dababy').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "dababy.jpg";
+  }
+document.querySelector('#jordan').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "jordan.jpg";
+  }
+document.querySelector('#maleeyes').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "maleeyes.jpg";
+  }
+document.querySelector('#harden').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "harden.jpg";
+  }
+document.querySelector('#ari').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "ari.jpg";
+  }
+document.querySelector('#durant').onclick = function(){
+    var image = document.getElementById("image");
+    image.src = "durant.jpg";
+  }
