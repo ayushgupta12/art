@@ -367,7 +367,7 @@ footer{
     font-family: 'Aldrich', sans-serif;
     color: rgba(0,0,0,.7);
 }
-.featured h1{
+.featured-h1{
     font-size: 3rem;
     margin: 0.5rem 0 3rem;
     margin-top: -5rem;
@@ -587,6 +587,8 @@ hr{
     }
 }
 .gallery-title{
+    font-size: 3rem;
+    text-transform: uppercase;
     animation-duration: 2s;
     animation-name: slideTop;
 }
