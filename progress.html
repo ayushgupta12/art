@@ -28,17 +28,17 @@
                         </a>
                     </div>
                     <div class="menu-icons open">
-                        <i style="color: rgba(0,0,0,.7);" class="icon ion-md-menu"></i>
+                        <i class="icon ion-md-menu"></i>
                     </div>
                     <ul class="nav-list">
                         <div class="menu-icons close">
                             <i class="icon ion-md-close"></i>
                         </div>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
+                            <a id="home_item" href="index.html" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.html#about" class="nav-link">About</a>
+                            <a id="about_item" href="index.html#about_jump" class="nav-link">About</a>
                         </li>
                         <li class="nav-item">
                             <a href="gallery.html" class="nav-link">Gallery</a>
@@ -47,15 +47,19 @@
                             <a href="progress.html" class="nav-link current">Unfinished</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.html#contact" class="nav-link">Contact</a>
+                            <a id="contact_item" href="index.html#contact" class="nav-link">Contact</a>
                         </li>
                     </ul>
+
                 </nav>
             </div>
         </header>
-        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br id="break"><br id="break"><br id="break"><br id="break">
+        <h3 id="direction" class="direction-title">Click On Different Images To View</h3>
+        <hr id="break">
         <section class="featured text-center">
-            <h1>Unfinished Projects</h1>
+            <h1 style="animation-duration: 3s; animation-name: fadein;" class="gallery-title">Unfinished Projects</h1>
+            <br>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 img-menu">
@@ -129,13 +133,14 @@
                         </div>
                     </div>
                 </div>
+                <div id="contact"></div>
+                <script type="text/javascript" src="current.js"></script>
             </div>
         </section>
         <footer id="contact">
             <div class="contact">
                 <h3>Contact:</h3>
                 <h4><a href="mailto:ayugup2004@gmail.com">ayugup2004@gmail.com</a></h4>
-                <h4><a href="tel:5106769076">(510) 676-9076</a></h4>
             </div>
             <div class="links">
                 <a href="https://www.instagram.com/ayu5h_gupt4/"><img src="ig.jpg" alt="ig logo"></a>

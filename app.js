@@ -1,3 +1,4 @@
+//Navigation Menu
 const selectElement = (s) => document.querySelector(s);
 
 selectElement('.open').addEventListener('click', () => {
@@ -8,6 +9,17 @@ selectElement('.close').addEventListener('click', () => {
     selectElement('.nav-list').classList.remove('active');
 });
 
+about_item.addEventListener('click', () => {
+  selectElement('.nav-list').classList.remove('active');
+});
+
+contact_item.addEventListener('click', () => {
+  selectElement('.nav-list').classList.remove('active');
+});
+
+
+//////////////////////////////////////////////////
+//Unfinished Section
 document.querySelector('#lebron').onclick = function(){
     var image = document.getElementById("image");
     image.src = "lebron.jpg";

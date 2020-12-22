@@ -35,6 +35,8 @@ header{
     top: 0;
     left: 0;
     z-index: 1;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("background.gif") bottom no-repeat;
+   
 }
 .container{
     width: 100%;
@@ -48,7 +50,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
 }
 .nav-brand{
     width: 20rem;
@@ -64,7 +66,7 @@ nav{
 .nav-list{
     width: 25rem;
     height: 100vh;
-    background-color: #000506;
+    background: linear-gradient(200deg, #000506 0%, rgba(49,24,131,0.9) 50%, #000506 100%), url("landscape.jpg") center no-repeat;
     position: fixed;
     top: 0;
     right: -26rem;
@@ -77,6 +79,8 @@ nav{
 }
 .nav-list.active{
     right: 0;
+    border-left: #000506 solid 2px;
+    box-shadow: 0px 5px 80px 40px #000506;
 }
 .close{
     position: absolute;
@@ -91,14 +95,14 @@ nav{
     color: #fafafa;
 }
 .nav-link{
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #fafafa;
 }
 .hero{
     width: 100%;
     height: 80vh;
-    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("landscape.jpg") center no-repeat;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("background.gif") center no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -161,6 +165,7 @@ nav{
 .btn:hover{
     background-color: #000506;
     color: #fafafa;
+    transform: scale(1.10);
 }
 .experience-outdoors{
     padding: 0;
@@ -237,12 +242,12 @@ nav{
     position: absolute;
     top: 55%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -60%);
     text-align: center;
 }
 .testimonial-customer img{
     width: auto;
-    height: 30rem;
+    height: 40rem;
     border-radius: 50%;
     border: 6px solid #eb648c;
     margin-bottom: 10rem;
@@ -284,11 +289,22 @@ footer{
         background-size: cover;
     }
 }
+@media screen and (max-width: 700px){
+    header{
+        height: 95px;
+    }
+    .home-header{
+        background: transparent;
+    }
+    .testimonial{
+        transform: translate(-50%, -45%);
+    }
+}
 @media screen and (min-width: 700px){
     header{
         height: 8rem;
         position: fixed;
-        background-color: #000506;
+        background: #000506;
     }
     .nav-brand{
         width: 20rem;
@@ -302,6 +318,7 @@ footer{
         right: initial;
         flex-direction: row;
         transition: initial;
+        background: #000506;
     }
     .menu-icons{
         display: none;
@@ -362,6 +379,14 @@ footer{
         height: 75vh;
     }
 }
+@media screen and (min-width: 2000px) and (min-height: 750px){
+    .testimonial{
+        transform: translate(-50%, -60%);
+    }
+    .testimonial-customer img{
+        height: 60rem;
+    }
+}
 
 .featured{
     font-family: 'Aldrich', sans-serif;
@@ -372,8 +397,6 @@ footer{
     margin: 0.5rem 0 3rem;
     margin-top: -5rem;
     text-transform: uppercase;
-    animation-duration: 3s;
-    animation-name: fadein;
 }
 .featured h4{
     font-size: 2rem;
@@ -395,7 +418,7 @@ footer{
     transition: transform .2s;
 }
 .zoom-hover:hover{
-    transform: scale(1.07);
+    transform: scale(1.10);
 }
 .carousel, ul{
     height: 400px;
@@ -433,20 +456,53 @@ footer{
     padding: 0;
 }
 .carousel ul{
-    animation: slide-animation 15s infinite;
+    animation: slide-animation-screen-large 20s infinite;
 }
 .carousel ul:hover{
     animation-play-state: paused;
 }
-@keyframes slide-animation{
+@keyframes slide-animation-screen-large{
     20%{left: 0}
     25%{left:-600px}
     45%{left: -600px}
     50%{left: -1200px}
     70%{left: -1200px}
     75%{left: -1800px}
-    98%{left: -1800px}
+    95%{left: -1800px}
     100%{left: 0}
+}
+@keyframes slide-animation-screen-small{
+    20%{left: 0}
+    25%{left:-520px}
+    45%{left: -520px}
+    50%{left: -1040px}
+    70%{left: -1040px}
+    75%{left: -1560px}
+    95%{left: -1560px}
+    100%{left: 0}
+}
+@media screen and (max-width: 485px){
+    .carousel, ul{
+        height: 300px;
+    }
+    .carousel{
+        width: 345px;
+    }
+    .carousel li{
+        height: 260px;
+        width: 520px;
+    }
+    .carousel-container{
+        width: 520px;
+    }
+    .carousel ul{
+        animation: slide-animation-screen-small 20s infinite;
+    }
+    .carousel-container img{
+        height: auto;
+        width: 100%;
+        padding: 0;
+    }
 }
 .links{
     width: 5rem;
@@ -477,16 +533,12 @@ footer{
     white-space: nowrap;
     min-height: 57rem;
     height: auto;
-    animation-duration: 2s;
-    animation-name: slideTop;
 }
 .horizontal-gallery{
     overflow: auto;
     white-space: nowrap;
     min-height: 35rem;
     height: auto;
-    animation-duration: 2s;
-    animation-name: slideTop;
 }
 .art-item{
     display: inline-block;
@@ -498,6 +550,9 @@ footer{
     transition: transform .2s;
     box-shadow: 0px 5px 20px 5px #888888;
     vertical-align: center;
+    position: relative;
+    animation-duration: 3s;
+    animation-name: slideRight;
 }
 .art-item:hover{
     transform: scale(1.05);
@@ -506,6 +561,14 @@ footer{
     height: auto;
     width: 35rem;
     max-height: 50rem;
+}
+@keyframes slideRight {
+    0% {
+        right: 2000px;
+    }
+    100% {
+        right: 0px;
+    }
 }
 /* width */
 ::-webkit-scrollbar {
@@ -530,19 +593,8 @@ footer{
 hr{
     background-color: rgba(0, 0, 0, 0.1);
     height: 2px;
-    animation-duration: 2s;
-    animation-name: slideTop;
 }
-@keyframes slideTop {
-    0% {
-        margin-bottom: -1000px;
-        margin-top: 1000px;
-    }
-    100% {
-        margin-bottom: 0px;
-        margin-top: 0px;
-    }
-}
+
 .img-menu{
     height: 70vh;
     overflow: scroll;
@@ -561,6 +613,17 @@ hr{
     border: none;
     box-shadow: 0px 5px 5px 2px #888888;
     margin: 10px;
+    animation-duration: 2s;
+    animation-name: slideDown;
+    position: relative;
+}
+@keyframes slideDown{
+    0% {
+        bottom: 4000px;
+    }
+    100% {
+        bottom: 0px;
+    }
 }
 .unfinished-img{
     margin-top: 30px;
@@ -585,12 +648,17 @@ hr{
     .img-menu{
         overflow: visible;
     }
+    #direction{
+        display: none;
+    }
+    #break{
+        display: none;
+    }
 }
+
 .gallery-title{
     font-size: 3rem;
     text-transform: uppercase;
-    animation-duration: 2s;
-    animation-name: slideTop;
 }
 .unfinished-description{
     margin-top: 2rem;
@@ -602,4 +670,22 @@ hr{
     animation-duration: 3s;
     animation-name: fadein;
     margin-left: 5rem;
+}
+.box {
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    border: solid 2px #111;
+    font-size: 20px;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    top: 300px;
+    left: 100px;
+}
+.direction-title{
+    color: #eb648c;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
