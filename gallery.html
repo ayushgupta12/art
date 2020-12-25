@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <title>Ayush Gupta Art</title>
     </head>
     <body style="background-color: #fafafa;">
@@ -50,7 +51,15 @@
       <br><br><br><br><br><br><br><br><br>
       <main class="gallery-background">
        <h3 class="direction-title">Scroll Right To View Each Section &rarr;</h3>
-        <hr>
+        <br><br><br><br><br><br id="colored"><br><br><hr>
+        <div class="box">
+            <select id="dropdown" data-placeholder="Choose&hellip;" name="forma" onchange="location = this.value;">
+                <option value="gallery.html#colored">Colored Pencil</option>
+                <option value="gallery.html#charcoal">Charcoal/Pencil</option>
+                <option value="gallery.html#paint">Paint</option>
+                <option value="gallery.html#marker">Marker</option>
+            </select>
+        </div>
         <section class="featured text-center">
             <h1 class="gallery-title">Colored Pencil</h1>
             <br>
@@ -89,7 +98,7 @@
                 </div>
             </div>
         </section>
-        <hr><br><br>
+        <hr id="charcoal"><br><br>
         <section class="featured text-center">
           <h1 class="gallery-title">Charcoal/Pencil</h1>
           <br>
@@ -170,7 +179,7 @@
               </div>
           </div>
         </section>
-        <hr><br><br>
+        <hr id="paint"><br><br>
         <section class="featured text-center">
           <h1 class="gallery-title">Paint</h1>
           <br>
@@ -263,7 +272,7 @@
               </div>
           </div>
         </section>
-        <hr><br><br>
+        <hr id="marker"><br><br>
         <section class="featured text-center">
           <h1 class="gallery-title">Marker</h1>
           <br>
