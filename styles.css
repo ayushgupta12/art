@@ -34,8 +34,8 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
-    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("background.gif") bottom no-repeat;
+    z-index: 2000;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("assets/background.gif") bottom no-repeat;
    
 }
 .container{
@@ -66,7 +66,7 @@ nav{
 .nav-list{
     width: 25rem;
     height: 100vh;
-    background: linear-gradient(200deg, #000506 0%, rgba(49,24,131,0.9) 50%, #000506 100%), url("landscape.jpg") center no-repeat;
+    background: linear-gradient(200deg, #000506 0%, rgba(49,24,131,0.9) 50%, #000506 100%), url("assets/landscape.jpg") center no-repeat;
     position: fixed;
     top: 0;
     right: -26rem;
@@ -102,7 +102,7 @@ nav{
 .hero{
     width: 100%;
     height: 80vh;
-    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("background.gif") center no-repeat;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("assets/background.gif") center no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -113,7 +113,7 @@ nav{
     bottom: -3px;
     width: 100%;
     height: 4.7rem;
-    background: url("wave-small.png") center no-repeat;
+    background: url("assets/wave-small.png") center no-repeat;
     background-size: cover;
 }
 .main-message{
@@ -222,7 +222,7 @@ nav{
 .testimonials{
     width: 100%;
     height: 80vh;
-    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("background.jpg") center no-repeat fixed;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("assets/background.jpg") center no-repeat fixed;
     background-size: cover;
     position: relative;
 }
@@ -233,7 +233,7 @@ nav{
     left: 0;
     width: 100%;
     height: 4.7rem;
-    background: url("wave-small-reversed.png") center no-repeat;
+    background: url("assets/wave-small-reversed.png") center no-repeat;
     background-size: cover;
 }
 .testimonial{
@@ -244,6 +244,11 @@ nav{
     left: 50%;
     transform: translate(-50%, -60%);
     text-align: center;
+}
+.testimonial-customer{
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
 }
 .testimonial-customer img{
     width: auto;
@@ -280,12 +285,12 @@ footer{
     
     .hero::before{
         height: 9.4rem;
-        background: url(wave-medium.png);
+        background: url(assets/wave-medium.png);
         background-size: cover;
     }
     .testimonials::before{
         height: 9.4rem;
-        background: url(wave-medium-reversed.png);
+        background: url(assets/wave-medium-reversed.png);
         background-size: cover;
     }
 }
@@ -362,12 +367,12 @@ footer{
 @media screen and (min-width: 950px){
     .hero::before{
         height: 22.7rem;
-        background: url(wave-large.png);
+        background: url(assets/wave-large.png);
         background-size: cover;
     }
     .testimonials::before{
         height: 22.7rem;
-        background: url(wave-large-reversed.png);
+        background: url(assets/wave-large-reversed.png);
         background-size: cover;
     }
     .testimonial{
@@ -413,6 +418,80 @@ footer{
 }
 .art-img{
     box-shadow: 0px 5px 20px 5px #888888;
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+}
+.art-item,
+.unfinished-btn,
+.img-viewport,
+.watermark-frame,
+.carousel-container{
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+}
+
+.art-img::after,
+.art-item::after,
+.unfinished-btn::after,
+.watermark-frame::after,
+.carousel-container::after,
+.testimonial-customer::after{
+    content: "2021";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    padding: 0.2rem 0.8rem;
+    border-radius: 2rem;
+    background: rgba(49,24,131,0.7);
+    color: #fafafa;
+    font-size: 1.3rem;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.art-img[data-year]::after,
+.art-item[data-year]::after,
+.unfinished-btn[data-year]::after,
+.watermark-frame[data-year]::after,
+.carousel-container[data-year]::after,
+.testimonial-customer[data-year]::after{
+    content: attr(data-year);
+}
+
+.no-watermark::after{
+    content: none;
+}
+
+/* Home carousel: the list is shifted up, so move watermark down into view */
+.carousel-container::after{
+    top: 2.5rem;
+    right: 10rem;
+}
+
+/* Unfinished page: thumbnails need a smaller watermark */
+.unfinished-btn{
+    padding: 0;
+}
+.unfinished-btn img{
+    display: block;
+}
+.unfinished-btn::after{
+    top: 0.6rem;
+    right: 0.6rem;
+    font-size: 1rem;
+    padding: 0.1rem 0.6rem;
+}
+
+/* Unfinished page: watermark should track the image, not the full viewport */
+.watermark-frame{
+    display: inline-block;
+    margin-top: 30px;
+}
+.watermark-frame img{
+    display: block;
 }
 .zoom-hover{
     transition: transform .2s;
@@ -626,7 +705,7 @@ hr{
     }
 }
 .unfinished-img{
-    margin-top: 30px;
+    margin-top: 0;
     animation-duration: 2s;
     animation-name: slideLeft;
 }
@@ -654,6 +733,9 @@ hr{
     #break{
         display: none;
     }
+    .watermark-frame::after{
+        display: none;
+    }
 }
 
 .gallery-title{
@@ -662,7 +744,7 @@ hr{
 }
 .unfinished-description{
     margin-top: 2rem;
-    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("background.gif") bottom;
+    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("assets/background.gif") bottom;
     padding: 0.5rem;
     color: #fafafa;
     width: 60rem;
@@ -692,7 +774,7 @@ hr{
   }
   
   .box select {
-    background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("background.gif") bottom no-repeat;;
+        background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("assets/background.gif") bottom no-repeat;;
     color: #fafafa;
     padding: 12px;
     width: 250px;
