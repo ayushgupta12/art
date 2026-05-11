@@ -1,0 +1,66 @@
+{
+  "archivedAt": "2026-05-10",
+  "note": "Archived items are removed from the live Gallery/Unfinished pages but image files are kept in assets/.",
+  "items": [
+    {
+      "section": "Charcoal/Pencil",
+      "title": "Eyes",
+      "src": "assets/eyes.jpg",
+      "year": 2019
+    },
+    {
+      "section": "Charcoal/Pencil",
+      "title": "Steph Curry",
+      "src": "assets/curry.jpg",
+      "year": 2018
+    },
+    {
+      "section": "Charcoal/Pencil",
+      "title": "Lips",
+      "src": "assets/lips.jpg",
+      "year": 2019
+    },
+    {
+      "section": "Paint",
+      "title": "Jacaranda Trees",
+      "src": "assets/trees.jpg",
+      "year": 2017
+    },
+    {
+      "section": "Paint",
+      "title": "Blue Jay",
+      "src": "assets/jay.jpg",
+      "year": 2017
+    },
+    {
+      "section": "Paint",
+      "title": "Grape Vine",
+      "src": "assets/grapes.jpg",
+      "year": 2017
+    },
+    {
+      "section": "Unfinished",
+      "title": "DaBaby",
+      "src": "assets/dababy.jpg",
+      "year": 2019
+    },
+    {
+      "section": "Unfinished",
+      "title": "Michael Jordan",
+      "src": "assets/jordan.jpg",
+      "year": 2020
+    },
+    {
+      "section": "Unfinished",
+      "title": "Ariana Grande (2017)",
+      "src": "assets/ariana2.jpg",
+      "year": 2017
+    },
+    {
+      "section": "Unfinished",
+      "title": "Ariana Grande (2019)",
+      "src": "assets/ari.jpg",
+      "year": 2019
+    }
+  ]
+}
